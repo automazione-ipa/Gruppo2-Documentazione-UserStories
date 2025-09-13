@@ -1,33 +1,14 @@
 # Documentazione User Stories
-## 1.0 Registrazione  
-**Come utente non registrato**, voglio potermi registrare tramite email e password per accedere alle funzionalità avanzate e salvare le mie preferenze.  
-
-**Flusso:**  
-1. L’utente accede al sito dalla pagina iniziale.  
-2. Clicca sul pulsante **“Registrati”**.  
-3. Inserisce email, password e conferma password.  
-4. Il sistema valida i dati:  
-   - Se corretti -> crea l’account e reindirizza alla Home.  
-   - Se errati -> mostra un messaggio di errore.  
-
-**Acceptance Criteria:**  
-- Dato che inserisco dati validi, quando clicco **Conferma**, allora il sistema mi registra e accedo alla Home.  
-- Dato che inserisco un’email già registrata, allora ricevo un errore e non posso procedere.  
-- Dato che la password non rispetta i requisiti (es. min 8 caratteri), allora il sistema segnala l’errore.  
-
-**Priorità:** Must-have  
 
 ---
 
-## 1.1 Login  
+## 1.0 Login  
 **Come utente registrato**, voglio autenticarmi tramite email e password per accedere alle mie funzionalità personalizzate e alle preferenze salvate.  
 
 **Flusso:**  
-1. L’utente clicca su **Login**.  
-2. Inserisce email e password.  
-3. Il sistema controlla le credenziali.  
-   - Se corrette -> reindirizza alla Home.  
-   - Se errate -> mostra errore e richiede nuovo tentativo.  
+1. L’utente clicca su **Login** facendo l'accesso tramite social.  
+2. L’utente autenticato viene reindirizzato alla Homepage.
+3. -- variante : qualcosa va storto - riprovare
 
 **Acceptance Criteria:**  
 - Dato che inserisco credenziali corrette, quando clicco login, allora accedo alla Home.  
@@ -48,6 +29,7 @@
    - Viaggi esistenti -> elenco con titolo, date, destinazione, stato e pulsante **“Crea nuovo viaggio”**.  
 3. Posso aprire o creare un nuovo viaggio.  
 4. Ogni viaggio ha un chatbot dedicato.  
+5. -- da cambiare : 1 viaggio alla volta su 3 pagine: lista dei desideri, viaggi in programma e storico
 
 **Acceptance Criteria:**  
 - Dato che non ho viaggi salvati, allora vedo un pulsante per crearne uno nuovo.  
@@ -83,7 +65,7 @@
 **Flusso:**  
 1. Ogni viaggio contiene uno o più itinerari.  
 2. Posso: creare, modificare, archiviare o eliminare itinerari.  
-
+3. -- nota: è possibile annullare il viaggio 
 **Acceptance Criteria:**  
 - Dato che creo un itinerario, allora questo appare nel viaggio.  
 - Dato che modifico un itinerario, allora le modifiche vengono salvate.  
@@ -98,7 +80,7 @@
 
 **Flusso:**  
 1. Accedo a **Offerte e Prezzi**.  
-2. Il sistema aggiorna i dati da scraping/API chiamate da API interne.  
+2. Il sistema aggiorna i dati da scraping/API chiamate da API interne. 
 3. Le offerte sono filtrate sulle preferenze del viaggio.  
 4. Posso visualizzare dettagli, confrontare e prenotare.  
 
@@ -123,4 +105,4 @@
 - Dato che provo ad accedere a una funzione premium senza crediti, allora il sistema mi propone un piano di acquisto.  
 - Dato che attivo un abbonamento, allora vedo subito le funzionalità premium sbloccate.  
 
-**Priorità:** Must-have
+**Priorità:** Should-have
